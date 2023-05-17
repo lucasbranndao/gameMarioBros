@@ -3,25 +3,32 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  font-family: sans-serif;
+  background: black;
+}
 
 .gameBoard {
-  width:  80%;
-  height: 500px;
-  border: 1px solid #333;
 
-  margin: 0 auto;
+  width:  100%;
+  height: 500px;
+  border-bottom: 15px solid rgb(35, 160, 35);
+
+  margin: 100px 0 auto;
   position: relative;
 
   overflow: hidden;
+
+  background: linear-gradient(#87CEEB, #E0F6FF);
 }
 
 .pipe {
   position: absolute;
   
   bottom: 0;
-  width: 80px;
+  width: 70px;
   
-  animation: pipeAnimation 2s infinite linear;
+  animation: pipeAnimation 1.5s infinite linear;
 }
 
 @keyframes pipeAnimation{
@@ -31,4 +38,103 @@
   to {
     right: 100%;
   }
+}
+
+
+.mario {
+  width: 120px;
+  position: absolute;
+  bottom: 0; 
+}
+
+.jump {
+  animation: jumpMario 500ms  ease-out;
+}
+
+
+@keyframes jumpMario {
+  0%{
+    bottom: 0;
+  }
+  40% {
+    bottom: 180px;
+  }
+
+  50%{
+    bottom: 180px;
+
+  }
+  60%{
+    bottom: 180px;
+  }
+
+  100%{
+    bottom: 0;
+  }
+}
+
+.clouds {
+  position: absolute;
+  width: 550px;
+  animation: clouds-animation 20s infinite linear;
+}
+
+@keyframes clouds-animation {
+  from {
+    right: -550px;
+
+  } to {
+    right: 100%;
+  }
+}
+
+.modal-over {
+  position: absolute;
+  inset: 0;
+  
+  display: grid;
+  place-content: center;
+  
+  
+  opacity: 0;
+  visibility: hidden;
+  
+}
+
+.modal-over.open{
+  
+  opacity: 1;
+  visibility: visible;
+}
+
+.gameOver {
+  position: relative;
+  display: grid;
+  place-content: center;
+  
+  font-weight: bold;
+  font-size: 50px;
+  color:red;
+      
+}
+
+.modal-over button{ 
+  padding: 20px;
+  border-radius: 25px;
+
+  font-weight: bold;
+  font-size: 20px;
+
+  background-color: green;
+  color: white;
+
+  cursor: pointer
+
+}
+
+.modal-over button:hover{
+  scale: 1.1;
+  box-shadow: 1px 1px green;
+  background: white;
+  color: green;
 }
