@@ -2,7 +2,14 @@ const mario = document.querySelector('.mario')
 const pipe = document.querySelector('.pipe')
 const clouds = document.querySelector('.clouds')
 const modal = document.querySelector('.modal-over')
+const restart = document.querySelector('.modal-over button')
 
+restart.addEventListener('click', start)
+
+function start() {
+  window.location.reload(false);
+
+}
 
 const jump = () => {
   
@@ -14,6 +21,7 @@ const jump = () => {
   }, 500)
   
 }
+
 
 const loop = setInterval(() => {
   const pipePosition = pipe.offsetLeft;

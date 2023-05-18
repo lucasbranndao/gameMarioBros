@@ -110,14 +110,20 @@ body{
 .gameOver {
   position: relative;
   display: grid;
-  place-content: center;
+  justify-items: center;
+  
   
   font-weight: bold;
   font-size: 50px;
   color:red;
       
 }
-
+.gameOver span{
+  margin: 25px 0;
+  font-size: 30px;
+  color: black;
+  
+}
 .modal-over button{ 
   padding: 20px;
   border-radius: 25px;
