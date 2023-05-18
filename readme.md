@@ -13,6 +13,7 @@ Modal/pop-up Game Over // implementado
 Contador de canos pulados 
 Botão Restart // implementado
 Background sonoro 
+aceleração do pipe em x% se loop durar 30 segundos 
 
 
 Adicionais back-end:
