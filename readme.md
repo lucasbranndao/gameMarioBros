@@ -12,12 +12,13 @@ Botão Start
 Modal/pop-up Game Over // implementado
 Contador de canos pulados 
 Botão Restart // implementado
-Background sonoro 
-Audio Jump
-Audio Game Over
-aceleração do pipe em x% se loop durar 30 segundos 
+Background sonoro // implementado
+Audio Jump // implementado
+Audio Game Over // implementado
+aceleração do pipe em x% a cada 30 segundos 
 
 
 Adicionais back-end:
-Historico dos melhores resultados
+Ranking jogadores e placares
+
 
